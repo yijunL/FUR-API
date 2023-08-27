@@ -30,7 +30,7 @@ type: API request type.
 | Training set | 20000 | 60 | 4 |
 | Test set | 1000 | 150 | 7 |
 
-## Anomaly Type
+## Anomaly Types
 ```
 1. Injection Attack:
    Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
