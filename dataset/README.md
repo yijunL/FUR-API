@@ -5,7 +5,6 @@
 
 ## Basic features of each API request sample
 timestamp  
-
 agent  
 
 method  
