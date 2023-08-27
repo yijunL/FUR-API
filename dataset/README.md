@@ -23,8 +23,8 @@ user_identity: User identity for who initiated the request.
 type: API request type.
 
 ## Dataset statistics 
-| 表头     | 表头     | 表头     |
-| -------- | -------- | -------- |
-| 行1，列1 | 行1，列2 | 行1，列3 |
-| 行2，列1 | 行2，列2 | 行2，列3 |
-| 行3，列1 | 行3，列2 | 行3，列3 |
+|          | Normal Samples | Anomaly Samples | Anomaly Type |
+| -------- | -------------- | --------------- | ------------ |
+| Training set | 20000 | 60 | 4 |
+| Test set | 1000 | 150 | 7 |
+
