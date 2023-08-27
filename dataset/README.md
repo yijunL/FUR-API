@@ -31,7 +31,6 @@ type: API request type.
 | Test set | 1000 | 150 | 7 |
 
 ## Anomaly Type
-injection attack, directory traversal attack, cross-site scripting attack, performance issue, invalid item value, sensitive data leakage, and unauthorized access attempt.
 ```
 1. Injection Attack:
    Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
