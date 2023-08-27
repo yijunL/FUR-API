@@ -34,7 +34,8 @@ type: API request type.
 injection attack, directory traversal attack, cross-site scripting attack, performance issue, invalid item value, sensitive data leakage, and unauthorized access attempt.
 ```
 1. Injection Attack:
-   Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.  
+   Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
+
 2. Directory Traversal Attack:
    A directory traversal attack, also known as a path traversal attack, occurs when an attacker tries to access files or directories outside of the intended scope by manipulating input parameters that represent file paths.
 
