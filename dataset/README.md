@@ -54,3 +54,5 @@ injection attack, directory traversal attack, cross-site scripting attack, perfo
 7. Unauthorized Access Attack:
    An unauthorized access attack involves attempting to access resources or perform actions that the user is not authorized to do. This could involve exploiting vulnerabilities to gain access to restricted areas of an application or performing actions that should be restricted to certain users.
 ```
+
+For the seven anomaly types mentioned above, the training set contains only four, and the test set contains four from the training set as well as an additional three unknown anomaly-type samples.
