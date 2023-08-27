@@ -33,26 +33,23 @@ type: API request type.
 ## Anomaly Type
 injection attack, directory traversal attack, cross-site scripting attack, performance issue, invalid item value, sensitive data leakage, and unauthorized access attempt.
 ```
-Certainly, I'd be happy to explain these different types of API request anomalies:
-
-1. **Injection Attack**:
-   Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
-
-2. **Directory Traversal Attack**:
+1. Injection Attack:
+   Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.  
+2. Directory Traversal Attack:
    A directory traversal attack, also known as a path traversal attack, occurs when an attacker tries to access files or directories outside of the intended scope by manipulating input parameters that represent file paths.
 
-3. **Cross-Site Scripting (XSS) Attack**:
+3. Cross-Site Scripting (XSS) Attack:
    Cross-site scripting attacks involve injecting malicious scripts into a web application that is then executed in the context of other users' browsers.
 
-4. **Performance Issue**:
+4. Performance Issue:
    This could include slow response times, high latency, or excessive resource utilization. Such anomalies can disrupt the user experience and affect the availability of the API.
 
-5. **Invalid Item Value**:
+5. Invalid Item Value:
    An API request with an invalid item value refers to providing data that does not adhere to the expected format or constraints.
 
-6. **Sensitive Data Leak**:
+6. Sensitive Data Leak:
    A sensitive data leak occurs when sensitive or confidential information is inadvertently exposed through an API response. This can happen due to improper data handling, misconfigured security settings, or other vulnerabilities, potentially leading to a breach of sensitive information.
 
-7. **Unauthorized Access Attack**:
+7. Unauthorized Access Attack:
    An unauthorized access attack involves attempting to access resources or perform actions that the user is not authorized to do. This could involve exploiting vulnerabilities to gain access to restricted areas of an application or performing actions that should be restricted to certain users.
 ```
