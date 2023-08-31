@@ -35,7 +35,6 @@ type: API request type.
 | Test set | 1000 | 150 | 7 |
 
 ### Anomaly Types
-```
 1. Injection Attack:
    Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
 
@@ -56,7 +55,6 @@ type: API request type.
 
 7. Unauthorized Access Attack:
    An unauthorized access attack involves attempting to access resources or perform actions that the user is not authorized to do. This could involve exploiting vulnerabilities to gain access to restricted areas of an application or performing actions that should be restricted to certain users.
-```
 
 For the seven anomaly types mentioned above, the training set contains only four, and the test set contains four from the training set as well as an additional three unknown anomaly-type samples.
 
