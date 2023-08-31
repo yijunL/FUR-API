@@ -2,12 +2,12 @@
 Dataset and codes for baselines for FUR-API: Dataset and Baselines toward Realistic API Anomaly Detection.   
 FUR-API is an API Anomaly Detection dataset, which aims to simulate realistic API anomaly detection in few-shot and unknown risk scenarios. 
 
-# DATASET
+## DATASET
 
-## List of columns for the dataset
+### List of columns for the dataset
 timestamp,	agent,	method,	request_body,	request_headers,	request_url,	response_body,	response_headers,	response_size,	source_ip,	source_port,	status,	target_ip,	target_port,	response_time,	user_identity, type.
 
-## Basic features of each API request sample
+### Basic features of each API request sample
 ```
 timestamp: Time when the API request was made.  
 agent: The client or software that initiated the API request.   
@@ -28,13 +28,13 @@ user_identity: User identity for who initiated the request.
 type: API request type.
 ```
 
-## Dataset statistics 
+### Dataset statistics 
 |          | Normal Samples | Anomaly Samples | Anomaly Type |
 | -------- | -------------- | --------------- | ------------ |
 | Training set | 20000 | 60 | 4 |
 | Test set | 1000 | 150 | 7 |
 
-## Anomaly Types
+### Anomaly Types
 ```
 1. Injection Attack:
    Injection attacks involve maliciously injecting untrusted data into an application's input, which can then manipulate the application's behavior.
@@ -61,7 +61,7 @@ type: API request type.
 For the seven anomaly types mentioned above, the training set contains only four, and the test set contains four from the training set as well as an additional three unknown anomaly-type samples.
 
 
-# Baseline codes
+## Baseline codes
 
 We have designed three baseline models that can utilize either BERT or CNN as the encoder.
 
@@ -74,7 +74,7 @@ In contrast to AE, VAE utilizes an encoder to generate the parameters of a poste
 During the training process, minimizing the distance between latent vectors in the generator network helps learn the feature distribution of normal samples. 
 When inference, a larger distance metric from the learned data distribution indicates an anomaly in that distribution.
 
-## Requirements and Installation
+### Requirements and Installation
 python3  
 ```
 pip install torch==1.10.1
@@ -86,14 +86,14 @@ If you want to use CNN as an encoder, please use the script download_pretrain.sh
 sh download_pretrain.sh
 ```
 
-## Preprocessing data
+### Preprocessing data
 put the dataset into data folder and run the data_split.py.
 ```
 cd data
 python data_split.py
 ```
 
-## Training & Testing
+### Training & Testing
 ```
 python main.py --train
 python main.py --test
@@ -102,5 +102,5 @@ python main.py --test
 You can adjust other parameters in the config.py.
 
 
-# Cite
+## Cite
 More details will be released when the paper is accepted.
