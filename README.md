@@ -61,7 +61,7 @@ For the seven anomaly types mentioned above, the training set contains only four
 
 ## Baseline codes
 
-We have designed three baseline models that can utilize either BERT or CNN as the encoder.
+We have designed three baseline models for this task.
 
 * **AutoEncoder** AutoEncoder (AE) is extensively employed in anomaly detection, in which the key idea is to train the AE model with normal sample data.
 The model compresses the input data into a lower-dimensional latent space and then attempts to reconstruct the data back into the original space by a decoder. 
