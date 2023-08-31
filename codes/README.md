@@ -31,3 +31,5 @@ python data_split.py
 python main.py --train
 python main.py --test
 ```
+
+You can adjust other parameters in the config.py.
