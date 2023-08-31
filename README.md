@@ -2,7 +2,7 @@
 Dataset and codes for baselines for FUR-API: Dataset and Baselines toward Realistic API Anomaly Detection.   
 FUR-API is an API Anomaly Detection dataset, which aims to simulate realistic API anomaly detection in few-shot and unknown risk scenarios. 
 
-# FUR-API DATASET
+# DATASET
 
 ## List of columns for the dataset
 timestamp,	agent,	method,	request_body,	request_headers,	request_url,	response_body,	response_headers,	response_size,	source_ip,	source_port,	status,	target_ip,	target_port,	response_time,	user_identity, type.
