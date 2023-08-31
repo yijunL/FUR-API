@@ -2,6 +2,12 @@
 Dataset and codes for baselines for FUR-API: Dataset and Baselines toward Realistic API Anomaly Detection.   
 FUR-API is an API Anomaly Detection dataset, which aims to simulate realistic API anomaly detection in few-shot and unknown risk scenarios. 
 
+### Dataset statistics 
+|          | Normal Samples | Anomaly Samples | Anomaly Type |
+| -------- | -------------- | --------------- | ------------ |
+| Training set | 20000 | 60 | 4 |
+| Test set | 1000 | 150 | 7 |
+
 ## DATASET
 
 ### List of columns for the dataset
@@ -27,12 +33,6 @@ response_time: Time taken by the server to process the API request and send back
 user_identity: User identity for who initiated the request.
 type: API request type.
 ```
-
-### Dataset statistics 
-|          | Normal Samples | Anomaly Samples | Anomaly Type |
-| -------- | -------------- | --------------- | ------------ |
-| Training set | 20000 | 60 | 4 |
-| Test set | 1000 | 150 | 7 |
 
 ### Anomaly Types
 1. **Injection Attack**:
