@@ -28,5 +28,6 @@ python data_split.py
 
 ## Training & Testing
 ```
-python main.py
+python main.py --train
+python main.py --test
 ```
