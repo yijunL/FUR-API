@@ -79,7 +79,7 @@ pip install torch==1.10.1
 pip install transformers==4.29.2
 pip install scikit-learn==1.2.2
 ```
-If you want to use CNN as an encoder, please use the script download_pretrain.sh to download the pretrain files.
+If you want to use CNN as the encoder, please use the script download_pretrain.sh to download the pretrain files.
 ```
 sh download_pretrain.sh
 ```
