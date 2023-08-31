@@ -1,5 +1,11 @@
 # FUR-API DATASET
 
+### Dataset statistics 
+|          | Normal Samples | Anomaly Samples | Anomaly Type |
+| -------- | -------------- | --------------- | ------------ |
+| Training set | 20000 | 60 | 4 |
+| Test set | 1000 | 150 | 7 |
+
 ## List of columns for the dataset
 timestamp,	agent,	method,	request_body,	request_headers,	request_url,	response_body,	response_headers,	response_size,	source_ip,	source_port,	status,	target_ip,	target_port,	response_time,	user_identity, type.
 
@@ -24,11 +30,6 @@ user_identity: User identity for who initiated the request.
 type: API request type.
 ```
 
-## Dataset statistics 
-|          | Normal Samples | Anomaly Samples | Anomaly Type |
-| -------- | -------------- | --------------- | ------------ |
-| Training set | 20000 | 60 | 4 |
-| Test set | 1000 | 150 | 7 |
 
 ## Anomaly Types
 ```
