@@ -2,11 +2,10 @@ import csv
 import random
 
 with open('train.csv', 'r', errors='ignore') as file:
-    # 创建CSV读取器
+
     csv_reader = csv.reader(file)
     data = []
-    
-    # 逐行读取并处理数据
+
     for row in csv_reader:
         data.append(row)
         
