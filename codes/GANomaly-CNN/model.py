@@ -4,15 +4,12 @@ from transformers import BertConfig, BertTokenizer, BertModel
 import os
 
 
-
-# 创建自定义模型
 class CNNAEModel(nn.Module):
     def __init__(self, encoder):
         super(CNNAEModel, self).__init__()
 
         self.cnn_model = encoder
-        
-        # 自编码机的编码器和解码器部分
+
         self.encoder1 = nn.Sequential(
             nn.Linear(230, 128),
             nn.ReLU(),
@@ -37,7 +34,6 @@ class CNNAEModel(nn.Module):
         )
 
     def forward(self, input_ids):
-        # 使用CNN编码文本字段
         cls_vector = self.cnn_model(input_ids)
 
         z1 = self.encoder1(cls_vector)
