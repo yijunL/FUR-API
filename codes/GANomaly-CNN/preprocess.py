@@ -20,10 +20,10 @@ class DataProcessor(object):
         self.encoder = encoder
         self.batch_size = batch_size
         self.max_seq_len = max_seq_len
-        # 加载数据
+
         self.data = self.load(path)
         self.index = 0
-        # residue 剩余
+
         self.residue = False
         self.num_samples = len(self.data[0])
         self.num_batches = self.num_samples // self.batch_size
