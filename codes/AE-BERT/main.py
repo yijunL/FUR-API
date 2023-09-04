@@ -17,8 +17,8 @@ parser.add_argument("--data_dir", type=str, default="./data", help="training dat
 parser.add_argument("--seed", type=int, default=1, help="random seed for initialization")
 args = parser.parse_args()
 
-# 损失函数
-reconstruction_criterion = nn.MSELoss()  # 均方误差损失
+
+reconstruction_criterion = nn.MSELoss()  
 
 
 def set_seed(seed):
@@ -31,27 +31,27 @@ def set_seed(seed):
 def train(model, config, train_iterator, dev_iterator):
     model.train()
     start_time = time.time()
-    # 优化器
+
     optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
     t_total = len(train_iterator) * config.num_epochs
     break_flag = False
     total_batch = 0
     last_improve = 0
     best_dev_loss = float('inf')
-    # 训练循环
+
     for epoch in range(config.num_epochs):
         print("Epoch [{}/{}]".format(epoch + 1, config.num_epochs))
         with open("logger.txt", "a+", encoding="utf-8") as fw:
             fw.write("Epoch [{}/{}]".format(epoch + 1, config.num_epochs))
-        # 开始训练
+
         for _, (batch_data, labels) in enumerate(train_iterator):
             decoded, cls_vector = model(
                 input_ids=batch_data['input_ids'],
                 attention_mask=batch_data['attention_mask'])
-            # 计算重构损失
+
             reconstruction_loss = reconstruction_criterion(decoded, cls_vector)
             reconstruction_loss.backward()
-            # 更新模型参数
+
             optimizer.step()
             optimizer.zero_grad()
 
@@ -89,7 +89,7 @@ def eval(model, iterator):
             decoded, cls_vector = model(
                 input_ids=batch["input_ids"],
                 attention_mask=batch["attention_mask"])
-            # 计算重构损失
+
             re_loss = re_loss + reconstruction_criterion(decoded, cls_vector)
         re_loss = re_loss / len(iterator)
     return re_loss
@@ -103,7 +103,7 @@ def threshold(model, config, iterator,auto_rate = 0.25):
             decoded, cls_vector = model(
                 input_ids=batch["input_ids"],
                 attention_mask=batch["attention_mask"])
-            # 计算重构损失
+
             reconstruction_loss = reconstruction_criterion(decoded, cls_vector)
             loss_set.append(reconstruction_loss.item())
 
@@ -111,7 +111,7 @@ def threshold(model, config, iterator,auto_rate = 0.25):
     return loss_set[int(len(loss_set)*auto_rate)]
 
 def test(model, config, iterator, flag=0.5):
-    # 在测试集上进行预测和评估
+
     print("testing...")
     model.eval()
     model.load_state_dict(torch.load(config.saved_model))
@@ -122,7 +122,7 @@ def test(model, config, iterator, flag=0.5):
         decoded, cls_vector = model(
             input_ids=batch["input_ids"],
             attention_mask=batch["attention_mask"])
-        # 计算重构损失
+
         reconstruction_loss = reconstruction_criterion(decoded, cls_vector)
 #         print("test reconstruction_loss: ", reconstruction_loss.item())
         with open("logger.txt", "a+", encoding="utf-8") as fw:
