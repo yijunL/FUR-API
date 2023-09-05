@@ -35,12 +35,10 @@ class BertAEModel(nn.Module):
     def forward(self, input_ids, attention_mask):
 
         bert_output = self.bert_model(input_ids, attention_mask=attention_mask)
-        cls_vector = bert_output.pooler_output  # 提取CLS向量
+        cls_vector = bert_output.pooler_output  
         # print(cls_vector.shape)
 
         encoded = self.encoder(cls_vector)
 
         decoded = self.decoder(encoded)
-
-        # classification_output = self.classifier(decoded)  # 使用[CLS]的输出
         return decoded, cls_vector
