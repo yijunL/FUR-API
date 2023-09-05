@@ -65,6 +65,5 @@ class BertAEModel(nn.Module):
         z3 = self.discriminator(x1)
         
         z4 = self.discriminator(cls_vector)
-        # 分类任务
-        # classification_output = self.classifier(decoded)  # 使用[CLS]的输出
+
         return cls_vector, x1, z1, z2, z3, z4
