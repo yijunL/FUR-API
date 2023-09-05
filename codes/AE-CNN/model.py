@@ -32,5 +32,4 @@ class CNNAEModel(nn.Module):
 
         decoded = self.decoder(encoded)
 
-        # classification_output = self.classifier(decoded)  # 使用[CLS]的输出
         return decoded, cls_vector
