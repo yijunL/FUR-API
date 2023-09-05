@@ -35,8 +35,6 @@ def data_separate(name):
     normal_data.to_csv(normal_output_path, index=False)
     abnormal_data.to_csv(abnormal_output_path, index=False)
 
-    print(name + "数据已根据类型分开并保存到CSV文件中。")
-
 
 data_separate("train")
 data_separate("dev")
