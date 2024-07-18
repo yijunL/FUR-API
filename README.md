@@ -101,4 +101,14 @@ You can adjust other parameters in the config.py.
 
 
 ## Cite
-More details will be released when the paper is accepted.
+If you find this repo helpful, feel free to cite us.
+```
+@inproceedings{liu2024api,
+  title={FUR-API: Dataset and Baselines Toward Realistic API Anomaly Detection},
+  author={Liu, Yijun and Yu, Honglan and Dai, Feifei and Gu, Xiaoyan and Cui, Chenxu and Li, Bo and Wang, Weiping},
+  booktitle={ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={4525--4529},
+  year={2024},
+  organization={IEEE}
+}
+```
